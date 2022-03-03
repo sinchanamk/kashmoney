@@ -21,26 +21,26 @@ class CommonStyles {
             letterSpacing: 0.3,
             fontSize: 16,
             color: ColorsConsts.primary,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Montserrat'));
+  }
+
+  static textField13w500primarypink() {
+    return GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            letterSpacing: 0.3,
+            fontSize: 13,
+            color: ColorsConsts.primary,
             fontWeight: FontWeight.w500,
             fontFamily: 'Montserrat'));
   }
 
-  static textField16w500yellow() {
+  static textField16w500black() {
     return GoogleFonts.montserrat(
         textStyle: const TextStyle(
             letterSpacing: 0.3,
-            fontSize: 16,
-            color: Color.fromARGB(255, 245, 160, 3),
-            fontWeight: FontWeight.w500,
-            fontFamily: 'Montserrat'));
-  }
-
-  static textField16w500amber() {
-    return GoogleFonts.montserrat(
-        textStyle: const TextStyle(
-            letterSpacing: 0.3,
-            fontSize: 16,
-            color: ColorsConsts.amber,
+            fontSize: 14,
+            color: ColorsConsts.black,
             fontWeight: FontWeight.w500,
             fontFamily: 'Montserrat'));
   }
@@ -130,8 +130,8 @@ class CommonStyles {
   static subheaderText20w600() {
     return GoogleFonts.montserrat(
         textStyle: const TextStyle(
-            color: ColorsConsts.primary,
-            backgroundColor: Colors.white,
+            color: Colors.white,
+            backgroundColor: ColorsConsts.black,
             letterSpacing: 0.2,
             fontSize: 18,
             fontWeight: FontWeight.w600,
@@ -140,11 +140,11 @@ class CommonStyles {
 
   static genderTextStyle() {
     return GoogleFonts.montserrat(
-        textStyle: TextStyle(
-            color: Colors.brown[900],
+        textStyle: const TextStyle(
+            color: ColorsConsts.primary,
             backgroundColor: Colors.transparent,
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
+            fontSize: 13,
+            fontWeight: FontWeight.w500,
             fontFamily: 'Montserrat'));
   }
 
@@ -152,7 +152,7 @@ class CommonStyles {
     return GoogleFonts.montserrat(
         textStyle: const TextStyle(
       color: ColorsConsts.primary,
-      
+
       // backgroundColor: Colors.transparent,
       fontSize: 15,
       fontWeight: FontWeight.w600,
@@ -173,7 +173,7 @@ class CommonStyles {
   static errorTextStyleStyle() {
     return GoogleFonts.montserrat(
         textStyle: const TextStyle(
-      color: Colors.redAccent,
+      color: ColorsConsts.primary1,
       backgroundColor: Colors.transparent,
       fontSize: 14,
       letterSpacing: 0.1,
@@ -193,11 +193,22 @@ class CommonStyles {
   static normalTextPurple() {
     return GoogleFonts.roboto(
         textStyle: const TextStyle(
-            color: Color.fromARGB(255, 77, 1, 112),
+            color: ColorsConsts.black,
             backgroundColor: Colors.transparent,
             fontSize: 18,
             letterSpacing: 0.1,
-            fontWeight: FontWeight.w900,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'Montserrat'));
+  }
+
+  static normalTextBlack28() {
+    return GoogleFonts.roboto(
+        textStyle: const TextStyle(
+            color: ColorsConsts.black,
+            backgroundColor: Colors.transparent,
+            fontSize: 28,
+            letterSpacing: 0.1,
+            fontWeight: FontWeight.w700,
             fontFamily: 'Montserrat'));
   }
 
@@ -217,7 +228,7 @@ class CommonStyles {
         textStyle: const TextStyle(
             color: Color.fromARGB(255, 3, 125, 182),
             backgroundColor: Colors.transparent,
-            fontSize: 15,
+            fontSize: 14,
             letterSpacing: 0.1,
             fontWeight: FontWeight.w500,
             fontFamily: 'Montserrat'));
@@ -226,20 +237,19 @@ class CommonStyles {
   static textHeader16w900() {
     return GoogleFonts.montserrat(
         textStyle: const TextStyle(
-            color: Color.fromARGB(255, 54, 14, 0),
-            backgroundColor: Colors.transparent,
+            color: ColorsConsts.primary,
             fontSize: 18,
             letterSpacing: 0.1,
-            fontWeight: FontWeight.w800,
+            fontWeight: FontWeight.w600,
             fontFamily: 'Montserrat'));
   }
 
   static labelText16w500Black() {
     return GoogleFonts.montserrat(
         textStyle: const TextStyle(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: ColorsConsts.primary,
             backgroundColor: Colors.transparent,
-            fontSize: 16,
+            fontSize: 10,
             letterSpacing: 0.3,
             fontWeight: FontWeight.w600,
             fontFamily: 'Montserrat'));
@@ -260,8 +270,17 @@ class CommonStyles {
     return GoogleFonts.montserrat(
         textStyle: const TextStyle(
             color: Colors.white,
-            
             fontSize: 14,
+            letterSpacing: 0.2,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'Montserrat'));
+  }
+
+  static labelText18w500White() {
+    return GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            color: Colors.white,
+            fontSize: 18,
             letterSpacing: 0.2,
             fontWeight: FontWeight.w500,
             fontFamily: 'Montserrat'));

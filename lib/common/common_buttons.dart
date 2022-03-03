@@ -9,7 +9,7 @@ Widget textButtonCommonSubmit(
   return TextButton(
       
     child: Container(
-      height: 48,width: 330,alignment: Alignment.center,
+      height: 42,width: 230,alignment: Alignment.center,
       padding: const EdgeInsets.all(10),
       child: Text(
         buttonName,

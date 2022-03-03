@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:loanapp/common/color.dart';
-import 'package:provider/provider.dart';
+import 'package:loanapp/home.dart';
 import 'package:sms_autofill/sms_autofill.dart';
-
 import '../Common/utils.dart';
 import '../common/common_styles.dart';
 import '../common/rounded_button.dart';
 import '../common/screen_width_and_height.dart';
-
 
 class VerifyScreen extends StatefulWidget {
   final String phoneNumber;
@@ -24,7 +22,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
   final controller = TextEditingController();
 
   final String _comingSms = 'Unknown';
- String _code = "";
+  String _code = "";
   // @override
   // void dispose() {
   //   SmsAutoFill().unregisterListener();
@@ -187,8 +185,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
                     decoration: UnderlineDecoration(
                         textStyle:
                             const TextStyle(fontSize: 20, color: Colors.black),
-                        colorBuilder:
-                            FixedColorBuilder(ColorsConsts.primary.withOpacity(0.6)),
+                        colorBuilder: FixedColorBuilder(
+                            ColorsConsts.primary.withOpacity(0.6)),
                         gapSpace: 10),
                     currentCode: _code,
 
@@ -203,7 +201,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                       print(controller.text);
                       if (code!.length == 6) {
                         // FocusScope.of(context).requestFocus(FocusNode());
-                       // verifyOTP(context);
+                        // verifyOTP(context);
                       }
                     },
                   ),
@@ -216,7 +214,10 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 Utils.getSizedBox(height: 12),
                 RoundedButton(
                   title: 'Verify OTP',
-                  onpressed: () async {
+                  onpressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    //async {
                     //verifyOTP(context);
                   },
                 ),
@@ -327,7 +328,7 @@ class _ResendOTPTimerState extends State<ResendOTPTimer> {
         Padding(
           padding: const EdgeInsets.only(right: 8.0),
           child: TextButton(
-              onPressed:(){},
+              onPressed: () {},
               //  _start != 0
               //     ? () {
               //         context.read<FirebaseAuthService>().signInWithPhoneNumber(
@@ -344,10 +345,10 @@ class _ResendOTPTimerState extends State<ResendOTPTimer> {
               //         style: CommonStyles.labelText15w500Blue(),
               //       )
               //     :
-                 child:  Text(
-                      "Resend OTP",
-                      style: CommonStyles.labelText15w500Blue(),
-                    )),
+              child: Text(
+                "Resend OTP",
+                style: CommonStyles.labelText15w500Blue(),
+              )),
         )
       ],
     );
